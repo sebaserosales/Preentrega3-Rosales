@@ -10,7 +10,7 @@
 
 body
 {
-    background-color: white;    
+    background-color: whitesmoke;    
 }
 
 header{
@@ -29,28 +29,27 @@ main{
    height: 100%;
 }
 
-.cuerpo {
-    column-count: 2;
+main .cuerpoColumnas .cuerpoTitulo{
+    background-color: green;
     padding: 10px;
+    color: white;
+    margin: 10px 0px 10px 0px;
+    text-align: left;
 }
 
-.columnas {
-    padding: 10px;
+main .cuerpoColumnas .cuerpoTitulo h2 {
+    text-align: left;
 }
 
-.columnas h2 {
-    padding: 10px;
-    text-align: center;
+main .cuerpoColumnas .principal {
+    color: green;
+    font-weight: bold;
 }
 
-main .servicios h2 {
-    padding: 10px;
-    text-align: center;
-}
-
-main .servicios p{
-    padding: 10px;
-
+main .cuerpoColumnas p {
+    padding: 5px;
+    text-align: justify;
+    margin: 5px;
 }
 
 footer  .contactdata {
