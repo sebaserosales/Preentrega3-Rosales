@@ -9,7 +9,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap" rel="stylesheet">
+    
     <!-- link al BS -->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -23,7 +24,8 @@
     <!-- Banner principal -->
     <header>
         <!-- Menu principal -->
-        <nav class="navbar navbar-expand-lg bg-body-black">
+        <div class="menu">
+          <nav class="navbar navbar-expand-lg bg-body-black">
             <div class="container-fluid">
               <a class="navbar-brand" href="index.html"><img src="img/logo.jpg" alt="logo" width="120" height="84"></a>
               <nav class="navbar navbar-dark bg-black">
@@ -55,13 +57,14 @@
               </div>
               
             </div>
-          </nav>    
+          </nav>
+        </div>      
     </header>
     
     <!-- Contenido Principal -->
     
     <main>
-            
+      <div class="content">      
         <!-- Banner de Imagen -->
         <div class="banner">    
             <img src="img/banner-auomatizacion-industrial.jpeg.jpg" alt="Imagen de automatizacion">
@@ -72,52 +75,74 @@
           <div class="cuerpoColumnas"> 
             <div class="cuerpoTitulo">
               <h2>Quienes Somos</h2>
-              </div>
-              <p class="principal"> Somos una empresa dedicada a servicios de automatización industrial </p.> 
+            </div>
+            <div class="cuerpoColumnaTexto">
+                <p class="principal"> Somos una empresa dedicada a servicios de automatización industrial </p.> 
 
-              <p class="principal"> Nos especializamos en ofrecer soluciones de automatización para la industria, incluyendo servicios programación de PLC, HMI, SCADAS, variadores de frecuencia y otros sistemas de control de procesos</p>
-                
-              <p> Nuestros servicios incluyen, soluciones de automatización para la industria, puesta en marcha y asistencia de líneas robotizadas, sistemas de transporte, sistemas de elevación, como así también, capacitación de personal</p> 
-                
-              <p> Nuestro equipo está altamente capacitado y cuenta con licenciados en automatización y robótica, con más de 15 años de experiencia en el rubro, lo que nos permite ofrecer soluciones personalizadas y de alta calidad</p>
-                
-              <p>Hemos trabajado en importantes empresas del sector automotriz prestando servicios para las principales empresas integradoras</p>
+                <p class="principal"> Nos especializamos en ofrecer soluciones de automatización para la industria, incluyendo servicios programación de PLC, HMI, SCADAS, variadores de frecuencia y otros sistemas de control de procesos</p>
+                  
+                <p> Nuestros servicios incluyen, soluciones de automatización para la industria, puesta en marcha y asistencia de líneas robotizadas, sistemas de transporte, sistemas de elevación, como así también, capacitación de personal</p> 
+                  
+                <p> Nuestro equipo está altamente capacitado y cuenta con licenciados en automatización y robótica, con más de 15 años de experiencia en el rubro, lo que nos permite ofrecer soluciones personalizadas y de alta calidad</p>
+                  
+            </div>
+              <div class="cuerpoColumnasImagen">
+                <img src="img/imagen-quienessomos.jpeg" alt="robot">
+              </div>
           </div>
           <div class="cuerpoColumnas">
               <div class="cuerpoTitulo">
                 <h2>Nuestros Clientes</h2>
               </div>
-              <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium 
-          voluptates doloremque ea accusantium voluptas rem. Ullam labore rerum 
-          est unde autem ducimus, commodi culpa magni, numquam consectetur 
-          accusamus doloremque neque?
-              </p>
+              <div class="cuerpoColumnasTexto">
+                <p>
+                  Hemos trabajado en las principales empresas del sector automotriz prestando servicios para diversas empresas integradoras
+                </p>
+            </div>
+              <div class="cuerpoColumnasClientes">
+                <div class="logo">
+                  <img src="img/Volkswagen_logo_2019.png" alt="logo VolksWagen">
+                </div>
+                <div class="logo">
+                  <img src="img/Ford_logo.png" alt="logo ford">
+                </div>
+                <div class="logo">
+                  <img src="img/Logo-Mercedes-Benz.png" alt="logo Mercedes Benz">
+                </div>
+                <div class="logo">
+                  <img src="img/toyota-logo-vector.png" alt="logo toyota">
+                </div>
+                <div class="logo">
+                  <img src="img/STELLANTIS-LOGO-transparent.png" alt="logo stellantis">
+                </div>
+                <div class="logo">
+                  <img src="img/GM-7169314a.png" alt="logo GM">
+                </div>
+              </div>
           </div>
         </div>
-        <div class="servicios">
-            <h2>Servicios</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente eum harum vitae consequuntur maiores corporis exercitationem, modi neque nemo! Omnis esse error beatae quae minima dignissimos maiores nulla voluptatibus nesciunt!</p>
-        </div>    
+      </div>
     </main>
     
     <!-- Pie de pagina -->
 
     <footer>
         <!-- Datos de Contacto -->
-        <section class="contactData">
-                
-        <h3>Datos de Contactos</h3>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores vitae ea sed, dolor est debitis tempore labore incidunt officiis commodi exercitationem nam facilis ipsa eaque culpa perspiciatis tenetur enim quaerat.</p>
-        </section>
+        <div class="contacto">
+          <section class="contactData">
+                  
+          <h3>Le interesan nuestros servicios?</h3>
+          <p>No dude en comunicarse con nosotros y dejenos un mensaje desde la página de Contacto o a través de los numeros que figuran debajo </p>
+          </section>
+        
         <!-- Info y link a redes sociales -->
-        <div class="topbar">
+          <div class="redes">
     
             <img src="img/email_PNG22.png" alt="correo">
             <label for="">pvita@ralf-automatizacion.com.ar</label>
             <img src="img/WhatsApp-logo.png" alt="whatsapp">
             <label for="">+54 9 11 5400 4869</label>
-          
+          </div>
         </div>        
 
 
