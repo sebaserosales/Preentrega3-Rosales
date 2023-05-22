@@ -81,7 +81,7 @@ main .cuerpoColumnas .cuerpoColumnasClientes .logo img{
 
 main .cuerpoColumnas .cuerpoColumnasTexto p {
 text-align: justify;
-
+margin-right: 5px;
 
 }
 main .cuerpoColumnas .principal {
@@ -118,8 +118,10 @@ footer .contacto h3 {
 
 footer section {
     padding: 10px;
+}
 
-
+footer .contacto p{
+    text-align: justify;
 }
 
 footer h3 {
@@ -145,5 +147,36 @@ h1 {
 
 h2{
     text-align: center;
+}
+
+
+@media screen and (min-width: 600px){
+    main .cuerpoColumnas .cuerpoColumnasContenido {
+        display: grid;
+        grid-template-columns: repeat(2,1FR);
+        align-items: center;
+     
+    }
+    main .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasImagen img{
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        
+    }
+    main .cuerpoColumnas .cuerpoColumnasClientes .logo img{
+        object-fit: contain;
+        width: 70%;
+        height: 70%;
+    }
+
+    footer .contacto p{
+        text-align: center;
+    }
+
+    footer  .redes {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 10px;
+    }
 }
 
