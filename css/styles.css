@@ -20,6 +20,7 @@ header{
     color: whitesmoke;
 }
 
+
 header .menu { 
 overflow: hidden;
 position: fixed; 
@@ -253,7 +254,7 @@ main .content .soluciones img {
     }
 
     main .content .soluciones p {
-        color: white;
+        color: whitesmoke;
         margin: 10px;
         padding: 30px;
     }
@@ -261,6 +262,7 @@ main .content .soluciones img {
     main .content .soluciones h3 {
         margin: 30px;
         align-items: center;
+        color: whitesmoke;
     }
 
     main .content .soluciones .solucionesPlc{
