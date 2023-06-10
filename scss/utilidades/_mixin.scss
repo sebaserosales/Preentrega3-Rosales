@@ -1,0 +1,24 @@
+@mixin flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+@mixin grid{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    row-gap: 1rem;
+}
+
+@mixin banner{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+
+}

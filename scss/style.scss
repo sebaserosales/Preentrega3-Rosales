@@ -1,7 +1,65 @@
-//import
+//Import
+@import "utilidades/variables";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;700&display=swap');
 
-@import "variables/vars";
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
 
 header{
-    background-color: blakc;
+    background-color: $color-headers;
+    color: whitesmoke;
+    .menu{
+        top: 0;
+        width:100%;
+        background-color: $color-headers;
+        z-index:1;
+    }
 }
+
+footer{
+    .contacto{
+        padding: 10px;
+        background-color: $color-headers;
+        color: whitesmoke;
+        .contactoData{
+            p{
+                text-align: justify;
+            }
+            h3{
+                font-size: 2rem;
+                font-weight: bold;
+            }
+        }
+    }
+    h3{
+        text-align: center;
+        padding: 10px;
+    }
+    section{
+        padding: 10px;
+    }
+    h4{
+        text-align: center;
+        background-color: $color-headers;
+        color: whitesmoke;
+        font-size: x-small;
+    }
+    
+}
+
+@import "html/index";
+@import "html/servicios";
+@import "html/clientes";
+@import "html/empresa";
+@import "html/contacto";
+
+
+
+

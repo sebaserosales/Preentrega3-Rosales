@@ -1,0 +1,63 @@
+//Utilidades
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+@import "../utilidades/extend";
+
+
+main{
+    .indexContent{
+       
+        .banner img{
+            @extend %imagenes;
+        }
+        .cuerpo{
+            .cuerpoColumnas{
+                    .cuerpoColumnasTitulo{
+                    @extend %titulos;
+                    h2{
+                        text-align: left;
+                        margin: 10px;
+                    }
+                }
+                .cuerpoColumnasContenido{
+                    .cuerpoColumnasContenidoTexto{
+                        .principal{
+                            color: $color-principal;
+                            font-weight: bold;
+                            padding: 5px;
+                        }
+                        p{
+                            text-align: justify;
+                            margin-right: 5px;
+                            padding: 5px;
+                        }
+                    }
+                    .cuerpoColumnasContenidoImagen {
+                        img{
+                            @extend %imagenes;
+                            padding: 10px;
+                            margin: 2px;
+                        }
+                    }
+                    .cuerpoColumnasContenidoClientes{
+                        display: grid;
+                        grid-template-columns: repeat(3,1FR);
+                        grid-template-rows: repeat(2,1FR);
+                        gap: 1rem;
+                        
+                        .logo{
+                            padding: 10px;
+                            margin: 2px;
+                            img{
+                                object-fit: contain;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

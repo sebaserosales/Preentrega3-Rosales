@@ -1,0 +1,29 @@
+//Utilidades
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+@import "../utilidades/extend";
+
+main{
+    .clientesContent{
+        .clientesContentBanner{
+            height: 30vh;
+            width: 100%;
+            position: relative;
+            @include flex;
+            background-image: url(../img/clientes-banner.jpeg);
+            background-size: cover;
+            h1{
+                position:relative;
+                text-align: center;
+                font-weight: bold;
+                color:$color-secundario;
+                text-shadow: 30%;
+            }
+        }
+    }
+}
+
+.clientesContentBanner::before{
+    @include banner;
+    background-color: rgba(232, 226, 226, 0.5);
+}
