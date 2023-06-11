@@ -16,8 +16,28 @@ main{
                 position:relative;
                 text-align: center;
                 font-weight: bold;
-                color:$color-secundario;
+                color:black;
                 text-shadow: 30%;
+            }
+        }
+        .clientesContentResumen{
+            p{
+                padding: 10px;
+                text-align: justify;
+            }
+        }
+        .clientesContentAreas{
+            display: grid;
+            align-items: baseline;
+            justify-content: center;
+            grid-template-columns: repeat(2,0.5fr);
+            grid-template-rows: repeat(2,0.5fr);
+            img{
+            @extend %imagenes;
+            }
+            ul{
+                text-align: center;
+                list-style: none;
             }
         }
     }
