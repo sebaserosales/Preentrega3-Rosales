@@ -1,8 +1,16 @@
+
 @mixin flex{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
+}
+
+@mixin flex_vertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
 }
 
 @mixin grid{
@@ -13,7 +21,7 @@
     row-gap: 1rem;
 }
 
-@mixin banner{
+@mixin banner_trasparencia{
     content: "";
     position: absolute;
     top: 0px;
@@ -21,4 +29,21 @@
     bottom: 0px;
     left: 0px;
 
+}
+
+@mixin banner ($url){
+height: 30vh;
+width: 100%;
+position: relative;
+@include flex;
+background-image: url($url);
+background-size: cover;
+}
+
+@mixin banner_titulo{
+    position:relative;
+    text-align: center;
+    font-weight: bold;
+    color:black;
+    text-shadow: 30%;
 }

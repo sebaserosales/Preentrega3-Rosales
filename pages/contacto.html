@@ -57,70 +57,87 @@
     <main>
         
         <!-- Contacto-->
-        <h1>Contactenos</h1>
-        <div class="contacto">
+        
+        <div class="contactoContent">
             <!-- Banner -->
-            <div class="contactoBanner">
-                <img src="../img/Contacto-Banner.jpeg" alt="banner de contacto">
+            <div class="contactoContentBanner">
+               
             </div>
             <!-- Formulario de Contacto -->
             <h1>¿Necesitas Encontrarnos?</h1>
-            <div class="contactoFormulario">
-                <p> Completa el formulario de contacto y nos pondremos en contacto contigo a la brevedad</p>
-                <form >
-                    <fieldset>
-                        <legend>Completa tus datos</legend>
-                            <div>
-                                <label for="">Nombre y Apellido</label>
-                                <input type="text"
-                                placeholder="Ingrese su nombre">
-                            </div>
-                            <div>
-                                <label for="">Email</label>
-                                <input type="email"
-                                placeholder="correo@email.com">
-                            </div>
-                            <div>
-                                <label for="">Telefono</label>
-                                <input type="number" placeholder="Ingrese su Telefono">
-                            </div>
-                            <div>
-                                <label for="Consulta"></label>
-                                <input type="text" placeholder="Ingrese aqui su consulta">
-                            </div>
-                            <div class="contactoFormularioBtn">
-                                <input type="submit">
-
-                            </div>
-                    </fieldset>
-                </form>
-            
+            <div class="contactoContentFormulario">
+                <h3>Escríbenos y en breve nos pondremos en contacto contigo</h3>
+                <form action="submeter-formulario.php" method="post">       
+                  
+                      <p>
+                        <label for="nombre" class="colocar_nombre">Nombre
+                          <span class="obligatorio">*</span>
+                        </label>
+                          <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                      </p>
+                    
+                      <p>
+                        <label for="email" class="colocar_email">Email
+                          <span class="obligatorio">*</span>
+                        </label>
+                          <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                      </p>
+                  
+                      <p>
+                        <label for="telefone" class="colocar_telefono">Teléfono
+                        </label>
+                          <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                      </p>    
+                    
+                      <p>
+                        <label for="website" class="colocar_website">Sitio web
+                        </label>
+                          <input type="url" name="introducir_website" id="website" placeholder="Escribe la URL de tu web">
+                      </p>    
+                    
+                      <p>
+                        <label for="asunto" class="colocar_asunto">Asunto
+                          <span class="obligatorio">*</span>
+                        </label>
+                          <input type="text" name="introducir_asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
+                      </p>    
+                    
+                      <p>
+                        <label for="mensaje" class="colocar_mensaje">Mensaje
+                          <span class="obligatorio">*</span>
+                        </label>                     
+                                          <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+                                      </p>                    
+                    
+                      <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
+                      <p class="aviso">
+                        <span class="obligatorio"> * </span>los campos son obligatorios.
+                      </p>          
+                  
+                </form>                        
             </div>
             
             <!-- Mapa de Ubicacion -->
             
-            <div class="contactoUbicacion">
+            <div class="contactoContentUbicacion">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d769.5036502814412!2d-58.51950730937769!3d-34.61113319087424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1682896551930!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
             
 
             </div>
-            <div class="contactoInfo">
-                <div class="contactoInfoUbicacion">
+            <div class="contactoContentInfo">
+                <div class="contactoContentInfoUbicacion">
                     <img src="../img/logo-ubicacion.png" alt="Ubicacion">
-                    <label for="">Dirección</label>
-                    <label for="">Av Rivadavia 4005, CABA</label>
+                    <p> Dirección <br> Av Rivadavia 4005, CABA</p>
                 </div>
 
-                <div class="contactoInfoTelefono">
+                <div class="contactoContentInfoTelefono">
                     <img src="../img/logo-telefono.png" alt="Telefono">
-                    <label for="">Teléfono</label>
-                    <label for="">(+54) 9 11 5400 4869</label>
+                    <p> Teléfono <br> (+54) 9 11 5400 4869</p>
                 </div>
                 
-                <div class="contactoInfoCorreo">
+                <div class="contactoContentInfoCorreo">
                     <img src="../img/logo-mail.png" alt="mail">
-                    <label for="">Correo Electrónico</label>
-                    <label for="">info@ralf-automatizacion.com</label>
+                    <p> Correo Electrónico <br> info@ralf-automatizacion.com</p>
                 </div>
             
             </div>

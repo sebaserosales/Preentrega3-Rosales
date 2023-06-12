@@ -1,0 +1,140 @@
+//Utilidades
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+@import "../utilidades/extend";
+
+main {
+    .contactoContent{
+        .contactoContentBanner{
+            @include banner("../img/Contacto-Banner.jpeg");
+        }
+        h1{
+            text-align: center;
+        }
+       .contactoContentFormulario{
+        
+            height: auto;
+            margin: 30px auto;
+            border-radius: 10px;  
+            padding-top: 30px;
+            padding-bottom: 20px;  
+            background-color: #fbfbfb; 
+            padding-left: 30px; 
+            h3{
+                font-size: 16px; 
+                padding-bottom: 30px;
+                color: $color-principal;
+                text-align: center;   
+            }
+            input{
+                background-color: #fbfbfb; 
+                width: 408px; 
+                height: 40px; 
+                border-radius: 5px;  
+                border-style: solid; 
+                border-width: 1px; 
+                border-color: $color-principal; 
+                margin-top: 10px;  
+                padding-left: 10px;
+                margin-bottom: 20px; 
+            }
+            textarea{
+                background-color: #fbfbfb; 
+                width: 405px; 
+                height: 150px; 
+                border-radius: 5px;  
+                border-style: solid; 
+                border-width: 1px; 
+                border-color: $color-principal; 
+                margin-top: 10px;  
+                padding-left: 10px;
+                margin-bottom: 20px; 
+                padding-top: 15px; 
+              }
+            label{
+            display: block; 
+            float: center;  
+            }
+            button{
+                height: 45px; 
+                padding-left: 5px;
+                padding-right: 5px;   
+                margin-bottom: 20px; 
+                margin-top: 10px;   
+                text-transform: uppercase;
+                background-color: $color-principal; 
+                border-color: $color-principal; 
+                border-style: solid; 
+                border-radius: 10px;  
+                width: 420px;   
+                cursor: pointer;
+                
+              }    
+            button p{
+            color: #fff;
+            padding-top: 7px;
+            }
+            span{
+                color: $color-principal 
+              }
+            .aviso{
+            font-size: 13px;  
+            color: #0e0e0e;  
+            }
+            p{
+            font-size: 14px; 
+            color: #0e0e0e; 
+            }  
+
+        }
+        .contactoContentUbicacion{
+            display: flex;
+            width: 100%;
+            margin: 10px;
+            padding: 10px;
+        }
+        .contactoContentInfo{
+            @include flex;
+            width: 1fr;
+            height: auto;
+            
+            margin: 10px;
+            padding: 10px;
+            img{
+                @extend %imagenes;
+                width: 100px;
+                height: 100px;
+            }
+            p{
+                font-size: 15px;
+                text-align: center;
+
+            }
+            .contactoContentInfoUbicacion{
+                @include flex_vertical;
+            }
+            .contactoContentInfoTelefono{
+                @include flex_vertical;
+            }
+            .contactoContentInfoCorreo{
+                @include flex_vertical;
+            }
+        } 
+    }
+}
+
+.contactoContentBanner::before{
+    @include banner_trasparencia;
+    background-color: rgba(232, 226, 226, 0.1);
+}
+
+.formulario input:focus{
+    outline:0;
+    border: 1px solid #97d848;
+  }
+  
+  
+  .formulario textarea:focus{
+    outline:0;
+    border: 1px solid #97d848;
+  }

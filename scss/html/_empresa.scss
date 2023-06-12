@@ -1,0 +1,73 @@
+//Utilidades
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+@import "../utilidades/extend";
+
+main{
+    .empresaContent{
+        .empresaContentBanner{
+            @include banner("../img/team-banner.jpeg");
+            h1{
+                @include banner_titulo;
+            }
+        }
+        .empresaContentResena{
+            padding: 10px;
+            p{
+                text-align: justify;
+            }
+            h2{
+                @extend %titulos;
+            }
+            img{
+                @extend %imagenes;
+            }
+            .text_PC{
+                display: none;
+            }
+            .importante{
+                @extend %importante;
+            }
+            button{
+                @extend %btn;
+                justify-content: end;
+                
+            }
+        }
+        .empresaContentCertificados{
+            h2{
+                @extend %titulos;
+            }
+            section{
+                font-size: 2rem;
+            }
+            section{
+                text-align: center;
+                margin: 10px;
+                padding: 10px;
+                font-size: 30px;
+            }
+            .empresaContentCertificadosImagenes{
+                
+                @include flex;
+                    flex-wrap: wrap;
+                    margin: 10px;
+                    padding: 10px;
+                    .empresaContentCertificadosImagenesInfo{
+                    h3{
+                        text-align: center;
+                        margin: 10px;
+                        font-size: 1rem;
+                    }
+                    
+                }    
+            }        
+            
+        }
+    }
+}
+
+.empresaContentBanner::before{
+    @include banner_trasparencia;
+    background-color: rgba(232, 226, 226, 0.5);
+}

@@ -22,9 +22,7 @@ main{
                 .cuerpoColumnasContenido{
                     .cuerpoColumnasContenidoTexto{
                         .principal{
-                            color: $color-principal;
-                            font-weight: bold;
-                            padding: 5px;
+                            @extend %importante;
                         }
                         p{
                             text-align: justify;
