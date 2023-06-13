@@ -1,6 +1,7 @@
 //Import
 @import "utilidades/variables";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;700&display=swap');
+@import "utilidades/mixin";
 
 /* Reset */
 *{
@@ -52,6 +53,19 @@ footer{
         font-size: x-small;
     }
     
+}
+
+@include tablet{
+    footer{
+        .contacto p{
+            text-align: center;
+        }
+        .redes{
+            display: flex;
+            justify-content: space-evenly;
+            margin: 10px;
+        }
+    }
 }
 
 @import "html/index";

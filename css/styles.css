@@ -7,17 +7,17 @@
   font-family: 'Roboto', sans-serif; }
 
 header {
-  background-color: #0D0D0D;
+  background-color: black;
   color: whitesmoke; }
   header .menu {
     top: 0;
     width: 100%;
-    background-color: #0D0D0D;
+    background-color: black;
     z-index: 1; }
 
 footer .contacto {
   padding: 10px;
-  background-color: #0D0D0D;
+  background-color: black;
   color: whitesmoke; }
   footer .contacto .contactoData p {
     text-align: justify; }
@@ -34,9 +34,17 @@ footer section {
 
 footer h4 {
   text-align: center;
-  background-color: #0D0D0D;
+  background-color: black;
   color: whitesmoke;
   font-size: x-small; }
+
+@media screen and (min-width: 600px) {
+  footer .contacto p {
+    text-align: center; }
+  footer .redes {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px; } }
 
 main .indexContent .banner img, main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen img, main .clientesContent .clientesContentAreas .clientesContentAreasTarjeta img, main .empresaContent .empresaContentResena img, main .empresaContent .empresaContentCertificados .empresaContentCertificadosImagenes .empresaContentCertificadosImagenesInfo img, main .contactoContent .contactoContentDatosInfo img {
   object-fit: cover;
