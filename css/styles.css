@@ -38,19 +38,19 @@ footer h4 {
   color: whitesmoke;
   font-size: x-small; }
 
-main .indexContent .banner img, main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen img, main .serviciosContent .serviciosContentSoluciones img, main .clientesContent .clientesContentAreas img, main .empresaContent .empresaContentResena img, main .contactoContent .contactoContentInfo img {
+main .indexContent .banner img, main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen img, main .clientesContent .clientesContentAreas .clientesContentAreasTarjeta img, main .empresaContent .empresaContentResena img, main .empresaContent .empresaContentCertificados .empresaContentCertificadosImagenes .empresaContentCertificadosImagenesInfo img, main .contactoContent .contactoContentDatosInfo img {
   object-fit: cover;
   width: 100%;
   height: 100%; }
 
-main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasTitulo, main .serviciosContent h2, main .empresaContent .empresaContentResena h2, main .empresaContent .empresaContentCertificados h2 {
+main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasTitulo, main .serviciosContent h2, main .empresaContent h2, main .empresaContent .empresaContentCertificados h2 {
   background-color: #58A22E;
   padding: 10px;
   color: whitesmoke;
   margin: 10px 10px 10px 5px;
   text-align: left; }
 
-main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoTexto .principal, main .empresaContent .empresaContentResena .importante {
+main .empresaContent .empresaContentResena .importante {
   color: #58A22E;
   font-weight: bold;
   padding: 5px; }
@@ -74,10 +74,16 @@ main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasTitulo h2 {
   text-align: left;
   margin: 10px; }
 
+main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoTexto .principal {
+  font-weight: bold; }
+
 main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoTexto p {
   text-align: justify;
   margin-right: 5px;
   padding: 5px; }
+
+main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoTexto .text_PC {
+  display: none; }
 
 main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen img {
   padding: 10px;
@@ -96,19 +102,52 @@ main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColum
       width: 100%;
       height: 100%; }
 
-main .indexContent .banner img, main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen img, main .serviciosContent .serviciosContentSoluciones img, main .clientesContent .clientesContentAreas img, main .empresaContent .empresaContentResena img, main .contactoContent .contactoContentInfo img {
+/*Media Query Tablet*/
+@media screen and (min-width: 600px) {
+  main .cuerpoColumnas .cuerpoColumnasContenido {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    row-gap: 1rem;
+    grid-template-columns: repeat(2, 1FR);
+    align-items: center; }
+    main .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoTexto p {
+      font-size: 20px;
+      text-align: center; }
+    main .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%; }
+    main .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoClientes .logo img {
+      object-fit: contain;
+      width: 70%;
+      height: 70%; } }
+
+/* Media Query PC */
+@media screen and (min-width: 1024px) {
+  main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoTexto .principal {
+    font-weight: bold; }
+  main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoTexto p {
+    text-align: justify;
+    margin-right: 5px;
+    padding: 5px; }
+  main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoTexto .text_PC {
+    display: block; } }
+
+main .indexContent .banner img, main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen img, main .clientesContent .clientesContentAreas .clientesContentAreasTarjeta img, main .empresaContent .empresaContentResena img, main .empresaContent .empresaContentCertificados .empresaContentCertificadosImagenes .empresaContentCertificadosImagenesInfo img, main .contactoContent .contactoContentDatosInfo img {
   object-fit: cover;
   width: 100%;
   height: 100%; }
 
-main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasTitulo, main .serviciosContent h2, main .empresaContent .empresaContentResena h2, main .empresaContent .empresaContentCertificados h2 {
+main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasTitulo, main .serviciosContent h2, main .empresaContent h2, main .empresaContent .empresaContentCertificados h2 {
   background-color: #58A22E;
   padding: 10px;
   color: whitesmoke;
   margin: 10px 10px 10px 5px;
   text-align: left; }
 
-main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoTexto .principal, main .empresaContent .empresaContentResena .importante {
+main .empresaContent .empresaContentResena .importante {
   color: #58A22E;
   font-weight: bold;
   padding: 5px; }
@@ -129,38 +168,74 @@ main .empresaContent .empresaContentResena button {
   background: #112C0C; }
 
 main .serviciosContent .serviciosContentSoluciones {
-  display: grid;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 1rem;
-  row-gap: 1rem;
-  grid-template-columns: auto;
-  grid-template-rows: repeat(5, 0.5FR);
-  padding: 5px;
-  background-color: #F2F2F2; }
+  align-items: center;
+  gap: 2rem;
+  margin: 10px;
+  padding: 10px; }
   main .serviciosContent .serviciosContentSoluciones h3 {
+    margin: 5px;
     padding: 5px;
     font-weight: bold;
     text-align: center; }
   main .serviciosContent .serviciosContentSoluciones p {
     text-align: justify;
-    padding: 5px; }
-  main .serviciosContent .serviciosContentSoluciones img {
-    padding: 20px; }
+    padding: 10px;
+    font-size: 1rem; }
+  main .serviciosContent .serviciosContentSoluciones .text_PC {
+    display: none; }
+  main .serviciosContent .serviciosContentSoluciones .serviciosContentSolucionesTarjeta {
+    flex-basis: 100%;
+    background-color: whitesmoke;
+    color: #434141;
+    border-radius: .5rem;
+    overflow: hidden; }
+    main .serviciosContent .serviciosContentSoluciones .serviciosContentSolucionesTarjeta img {
+      width: 100%; }
+    main .serviciosContent .serviciosContentSoluciones .serviciosContentSolucionesTarjeta .serviciosContentSolucionesTarjetaBody {
+      padding: 1rem; }
 
-main .indexContent .banner img, main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen img, main .serviciosContent .serviciosContentSoluciones img, main .clientesContent .clientesContentAreas img, main .empresaContent .empresaContentResena img, main .contactoContent .contactoContentInfo img {
+@media screen and (min-width: 600px) {
+  main .serviciosContent .serviciosContentSoluciones {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    justify-content: center;
+    align-items: baseline;
+    margin: 15px; }
+    main .serviciosContent .serviciosContentSoluciones .tarjeta_cinco {
+      grid-column: span 2;
+      margin-left: 100px;
+      margin-right: 100px; }
+  .carousel .carousel-item {
+    height: 500px; }
+  .carousel-item img {
+    position: absolute;
+    object-fit: contain;
+    top: 0;
+    left: 0;
+    min-height: 500px; } }
+
+@media screen and (min-width: 1024px) {
+  .carousel .carousel-item {
+    height: 650px; }
+  .carousel-item img {
+    min-height: 500px; } }
+
+main .indexContent .banner img, main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen img, main .clientesContent .clientesContentAreas .clientesContentAreasTarjeta img, main .empresaContent .empresaContentResena img, main .empresaContent .empresaContentCertificados .empresaContentCertificadosImagenes .empresaContentCertificadosImagenesInfo img, main .contactoContent .contactoContentDatosInfo img {
   object-fit: cover;
   width: 100%;
   height: 100%; }
 
-main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasTitulo, main .serviciosContent h2, main .empresaContent .empresaContentResena h2, main .empresaContent .empresaContentCertificados h2 {
+main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasTitulo, main .serviciosContent h2, main .empresaContent h2, main .empresaContent .empresaContentCertificados h2 {
   background-color: #58A22E;
   padding: 10px;
   color: whitesmoke;
   margin: 10px 10px 10px 5px;
   text-align: left; }
 
-main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoTexto .principal, main .empresaContent .empresaContentResena .importante {
+main .empresaContent .empresaContentResena .importante {
   color: #58A22E;
   font-weight: bold;
   padding: 5px; }
@@ -195,7 +270,9 @@ main .clientesContent .clientesContentBanner {
     text-align: center;
     font-weight: bold;
     color: black;
-    text-shadow: 30%; }
+    text-shadow: 30%;
+    background-color: rgba(198, 198, 198, 0.4);
+    display: block; }
 
 main .clientesContent .clientesContentResumen p {
   padding: 10px;
@@ -207,9 +284,38 @@ main .clientesContent .clientesContentAreas {
   justify-content: center;
   grid-template-columns: repeat(2, 0.5fr);
   grid-template-rows: repeat(2, 0.5fr); }
-  main .clientesContent .clientesContentAreas ul {
-    text-align: center;
-    list-style: none; }
+  main .clientesContent .clientesContentAreas .clientesContentAreasTarjeta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    main .clientesContent .clientesContentAreas .clientesContentAreasTarjeta img {
+      margin-left: 30px; }
+    main .clientesContent .clientesContentAreas .clientesContentAreasTarjeta ul {
+      text-align: center;
+      list-style: none; }
+      main .clientesContent .clientesContentAreas .clientesContentAreasTarjeta ul li {
+        padding: 3px; }
+
+@media screen and (min-width: 600px) {
+  main .clientesContent .clientesContentResumen p {
+    text-align: center; }
+  main .clientesContent .clientesContentAreas {
+    display: flex;
+    align-items: baseline;
+    justify-content: center; }
+    main .clientesContent .clientesContentAreas .clientesContentAreasTarjeta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem; }
+      main .clientesContent .clientesContentAreas .clientesContentAreasTarjeta img {
+        align-items: center; }
+      main .clientesContent .clientesContentAreas .clientesContentAreasTarjeta ul {
+        align-items: center; }
+        main .clientesContent .clientesContentAreas .clientesContentAreasTarjeta ul li {
+          text-align: center; } }
 
 .clientesContentBanner::before {
   content: "";
@@ -220,19 +326,19 @@ main .clientesContent .clientesContentAreas {
   left: 0px;
   background-color: rgba(232, 226, 226, 0.5); }
 
-main .indexContent .banner img, main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen img, main .serviciosContent .serviciosContentSoluciones img, main .clientesContent .clientesContentAreas img, main .empresaContent .empresaContentResena img, main .contactoContent .contactoContentInfo img {
+main .indexContent .banner img, main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen img, main .clientesContent .clientesContentAreas .clientesContentAreasTarjeta img, main .empresaContent .empresaContentResena img, main .empresaContent .empresaContentCertificados .empresaContentCertificadosImagenes .empresaContentCertificadosImagenesInfo img, main .contactoContent .contactoContentDatosInfo img {
   object-fit: cover;
   width: 100%;
   height: 100%; }
 
-main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasTitulo, main .serviciosContent h2, main .empresaContent .empresaContentResena h2, main .empresaContent .empresaContentCertificados h2 {
+main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasTitulo, main .serviciosContent h2, main .empresaContent h2, main .empresaContent .empresaContentCertificados h2 {
   background-color: #58A22E;
   padding: 10px;
   color: whitesmoke;
   margin: 10px 10px 10px 5px;
   text-align: left; }
 
-main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoTexto .principal, main .empresaContent .empresaContentResena .importante {
+main .empresaContent .empresaContentResena .importante {
   color: #58A22E;
   font-weight: bold;
   padding: 5px; }
@@ -267,25 +373,26 @@ main .empresaContent .empresaContentBanner {
     text-align: center;
     font-weight: bold;
     color: black;
-    text-shadow: 30%; }
+    text-shadow: 30%;
+    background-color: rgba(198, 198, 198, 0.4);
+    display: block;
+    background-color: rgba(198, 198, 198, 0.4); }
 
 main .empresaContent .empresaContentResena {
   padding: 10px; }
   main .empresaContent .empresaContentResena p {
-    text-align: justify; }
+    text-align: justify;
+    font-size: 1rem; }
   main .empresaContent .empresaContentResena .text_PC {
     display: none; }
   main .empresaContent .empresaContentResena button {
     justify-content: end; }
 
 main .empresaContent .empresaContentCertificados section {
-  font-size: 2rem; }
-
-main .empresaContent .empresaContentCertificados section {
   text-align: center;
   margin: 10px;
   padding: 10px;
-  font-size: 30px; }
+  font-size: 1.5rem; }
 
 main .empresaContent .empresaContentCertificados .empresaContentCertificadosImagenes {
   display: flex;
@@ -293,6 +400,7 @@ main .empresaContent .empresaContentCertificados .empresaContentCertificadosImag
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+  width: 90vw;
   margin: 10px;
   padding: 10px; }
   main .empresaContent .empresaContentCertificados .empresaContentCertificadosImagenes .empresaContentCertificadosImagenesInfo h3 {
@@ -309,19 +417,50 @@ main .empresaContent .empresaContentCertificados .empresaContentCertificadosImag
   left: 0px;
   background-color: rgba(232, 226, 226, 0.5); }
 
-main .indexContent .banner img, main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen img, main .serviciosContent .serviciosContentSoluciones img, main .clientesContent .clientesContentAreas img, main .empresaContent .empresaContentResena img, main .contactoContent .contactoContentInfo img {
+@media screen and (min-width: 600px) {
+  main .empresaContent .empresaContentResena {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    row-gap: 1rem;
+    grid-template-columns: 30% 70%; }
+  main .empresaContent .empresaContentCertificados .empresaContentCertificadosImagenes {
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    column-gap: 1rem;
+    align-items: center;
+    justify-content: space-between; }
+    main .empresaContent .empresaContentCertificados .empresaContentCertificadosImagenes .empresaContentCertificadosImagenesInfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+      padding: 10px; } }
+
+@media screen and (min-width: 1024px) {
+  main .empresaContent .empresaContentResena {
+    padding: 10px; }
+    main .empresaContent .empresaContentResena p {
+      text-align: justify;
+      font-size: 1rem; }
+    main .empresaContent .empresaContentResena .text_PC {
+      display: block; } }
+
+main .indexContent .banner img, main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen img, main .clientesContent .clientesContentAreas .clientesContentAreasTarjeta img, main .empresaContent .empresaContentResena img, main .empresaContent .empresaContentCertificados .empresaContentCertificadosImagenes .empresaContentCertificadosImagenesInfo img, main .contactoContent .contactoContentDatosInfo img {
   object-fit: cover;
   width: 100%;
   height: 100%; }
 
-main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasTitulo, main .serviciosContent h2, main .empresaContent .empresaContentResena h2, main .empresaContent .empresaContentCertificados h2 {
+main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasTitulo, main .serviciosContent h2, main .empresaContent h2, main .empresaContent .empresaContentCertificados h2 {
   background-color: #58A22E;
   padding: 10px;
   color: whitesmoke;
   margin: 10px 10px 10px 5px;
   text-align: left; }
 
-main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoTexto .principal, main .empresaContent .empresaContentResena .importante {
+main .empresaContent .empresaContentResena .importante {
   color: #58A22E;
   font-weight: bold;
   padding: 5px; }
@@ -341,120 +480,148 @@ main .empresaContent .empresaContentResena button {
   border: 2px solid #112C0C;
   background: #112C0C; }
 
-main .contactoContent .contactoContentBanner {
-  height: 30vh;
-  width: 100%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  background-image: url("../img/Contacto-Banner.jpeg");
-  background-size: cover; }
-
-main .contactoContent h1 {
-  text-align: center; }
-
-main .contactoContent .contactoContentFormulario {
-  height: auto;
-  margin: 30px auto;
-  border-radius: 10px;
-  padding-top: 30px;
-  padding-bottom: 20px;
-  background-color: #fbfbfb;
-  padding-left: 30px; }
-  main .contactoContent .contactoContentFormulario h3 {
-    font-size: 16px;
-    padding-bottom: 30px;
-    color: #58A22E;
-    text-align: center; }
-  main .contactoContent .contactoContentFormulario input {
-    background-color: #fbfbfb;
-    width: 408px;
-    height: 40px;
-    border-radius: 5px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #58A22E;
-    margin-top: 10px;
-    padding-left: 10px;
-    margin-bottom: 20px; }
-  main .contactoContent .contactoContentFormulario textarea {
-    background-color: #fbfbfb;
-    width: 405px;
-    height: 150px;
-    border-radius: 5px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #58A22E;
-    margin-top: 10px;
-    padding-left: 10px;
-    margin-bottom: 20px;
-    padding-top: 15px; }
-  main .contactoContent .contactoContentFormulario label {
-    display: block;
-    float: center; }
-  main .contactoContent .contactoContentFormulario button {
-    height: 45px;
-    padding-left: 5px;
-    padding-right: 5px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    text-transform: uppercase;
-    background-color: #58A22E;
-    border-color: #58A22E;
-    border-style: solid;
+main .contactoContent {
+  background-color: #F2F2F2; }
+  main .contactoContent .contactoContentBanner {
+    height: 30vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-image: url("../img/Contacto-Banner.jpeg");
+    background-size: cover; }
+  main .contactoContent h1 {
+    text-align: center;
+    margin: 10px;
+    padding: 10px; }
+  main .contactoContent .contactoContentFormulario {
+    height: auto;
+    margin: 30px auto;
     border-radius: 10px;
-    width: 420px;
-    cursor: pointer; }
-  main .contactoContent .contactoContentFormulario button p {
-    color: #fff;
-    padding-top: 7px; }
-  main .contactoContent .contactoContentFormulario span {
-    color: #58A22E; }
-  main .contactoContent .contactoContentFormulario .aviso {
-    font-size: 13px;
-    color: #0e0e0e; }
-  main .contactoContent .contactoContentFormulario p {
-    font-size: 14px;
-    color: #0e0e0e; }
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: #F2F2F2;
+    padding-left: 30px; }
+    main .contactoContent .contactoContentFormulario h3 {
+      font-size: 16px;
+      padding-bottom: 30px;
+      color: #58A22E;
+      text-align: center; }
+    main .contactoContent .contactoContentFormulario input {
+      background-color: #fbfbfb;
+      width: 408px;
+      height: 40px;
+      border-radius: 5px;
+      border-style: solid;
+      border-width: 1px;
+      border-color: #58A22E;
+      margin-top: 10px;
+      padding-left: 10px;
+      margin-bottom: 20px; }
+    main .contactoContent .contactoContentFormulario textarea {
+      background-color: #fbfbfb;
+      width: 405px;
+      height: 150px;
+      border-radius: 5px;
+      border-style: solid;
+      border-width: 1px;
+      border-color: #58A22E;
+      margin-top: 10px;
+      padding-left: 10px;
+      margin-bottom: 20px;
+      padding-top: 15px; }
+    main .contactoContent .contactoContentFormulario label {
+      display: block;
+      float: center; }
+    main .contactoContent .contactoContentFormulario button {
+      height: 45px;
+      padding-left: 5px;
+      padding-right: 5px;
+      margin-bottom: 20px;
+      margin-top: 10px;
+      text-transform: uppercase;
+      background-color: #58A22E;
+      border-color: #58A22E;
+      border-style: solid;
+      border-radius: 10px;
+      width: 420px;
+      cursor: pointer; }
+    main .contactoContent .contactoContentFormulario button p {
+      color: #fff;
+      padding-top: 7px; }
+    main .contactoContent .contactoContentFormulario span {
+      color: #58A22E; }
+    main .contactoContent .contactoContentFormulario .aviso {
+      font-size: 13px;
+      color: #0e0e0e; }
+    main .contactoContent .contactoContentFormulario p {
+      font-size: 14px;
+      color: #0e0e0e; }
+  main .contactoContent .contactoContentDatosUbicacion {
+    display: flex;
+    height: 60vh;
+    margin: 10px;
+    padding: 10px; }
+  main .contactoContent .contactoContentDatosInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 1fr;
+    height: auto;
+    margin: 10px;
+    padding: 10px; }
+    main .contactoContent .contactoContentDatosInfo img {
+      width: 100px;
+      height: 100px; }
+    main .contactoContent .contactoContentDatosInfo p {
+      font-size: 15px;
+      text-align: center; }
+    main .contactoContent .contactoContentDatosInfo .contactoContentDatosInfoUbicacion {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+    main .contactoContent .contactoContentDatosInfo .contactoContentDatosInfoTelefono {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+    main .contactoContent .contactoContentDatosInfo .contactoContentDatosInfoCorreo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
 
-main .contactoContent .contactoContentUbicacion {
-  display: flex;
-  width: 100%;
-  margin: 10px;
-  padding: 10px; }
+@media screen and (min-width: 600px) {
+  main .contactoContentFormulario {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  main .contactoContentDatos {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    row-gap: 1rem;
+    grid-template-columns: 70% 30%; }
+    main .contactoContentDatos .contactoContentDatosInfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+    main .contactoContentDatos .contactoContentDatosUbicacion {
+      width: 100%;
+      height: 80vh; } }
 
-main .contactoContent .contactoContentInfo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  width: 1fr;
-  height: auto;
-  margin: 10px;
-  padding: 10px; }
-  main .contactoContent .contactoContentInfo img {
-    width: 100px;
-    height: 100px; }
-  main .contactoContent .contactoContentInfo p {
-    font-size: 15px;
-    text-align: center; }
-  main .contactoContent .contactoContentInfo .contactoContentInfoUbicacion {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-  main .contactoContent .contactoContentInfo .contactoContentInfoTelefono {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-  main .contactoContent .contactoContentInfo .contactoContentInfoCorreo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
+@media screen and (min-width: 1024px) {
+  .contactoContentFormularioGrupo .separacion {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 2rem;
+    align-items: top; } }
 
 .contactoContentBanner::before {
   content: "";

@@ -46,4 +46,18 @@ background-size: cover;
     font-weight: bold;
     color:black;
     text-shadow: 30%;
+    
+    background-color: rgba(198, 198, 198, 0.4);
+}
+
+@mixin tablet{
+    @media screen and (min-width:600px)  {
+        @content;
+    }
+}
+
+@mixin PC{
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
 }

@@ -10,25 +10,79 @@ main {
             @extend %titulos;
         }
         .serviciosContentSoluciones{
-            @include grid;
-            grid-template-columns: auto;
-            grid-template-rows: repeat(5,0.5FR);
-            padding: 5px;
-            background-color: $color-fondo;
+            @include flex_vertical;
+            gap: 2rem;
+            margin: 10px;
+            padding: 10px;
             h3{
+               margin: 5px;
                padding: 5px;
                font-weight: bold;
                text-align: center; 
             }
             p{
                 text-align: justify;
-                padding: 5px;
+                padding: 10px;
+                font-size: 1rem;
             }
-            img{
-                @extend %imagenes;
-                padding: 20px;
-            }   
+            .text_PC{
+                display: none;
+            }
+            .serviciosContentSolucionesTarjeta{
+                flex-basis: 100%;
+                background-color: whitesmoke;
+                color: rgb(67, 65, 65);
+                border-radius: .5rem;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                }
+                .serviciosContentSolucionesTarjetaBody{
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@include tablet{
+    main{
+        .serviciosContent{
+            .serviciosContentSoluciones{
+            display: grid;
+            grid-template-columns: repeat(2,50%);
+            justify-content: center;
+            align-items: baseline;
+            margin: 15px;
+                .tarjeta_cinco{
+                grid-column: span 2;
+                margin-left: 100px;
+                margin-right: 100px;
+                }
+            }
 
         }
     }
+    .carousel .carousel-item {
+        height: 500px;
+      }
+      
+      .carousel-item  img {
+          position: absolute;
+          object-fit: contain;
+          top: 0;
+          left: 0;
+          min-height: 500px;
+          }
+}
+
+@include PC{
+    
+    .carousel .carousel-item {
+        height: 650px;
+      }
+      
+      .carousel-item  img {
+          min-height: 500px;
+          }    
 }

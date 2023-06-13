@@ -22,12 +22,15 @@ main{
                 .cuerpoColumnasContenido{
                     .cuerpoColumnasContenidoTexto{
                         .principal{
-                            @extend %importante;
+                            font-weight: bold;
                         }
                         p{
                             text-align: justify;
                             margin-right: 5px;
                             padding: 5px;
+                        }
+                        .text_PC{
+                            display: none;
                         }
                     }
                     .cuerpoColumnasContenidoImagen {
@@ -58,4 +61,68 @@ main{
             }
         }
     }
+}
+
+/*Media Query Tablet*/
+@include tablet {
+main{
+    .cuerpoColumnas{
+        .cuerpoColumnasContenido{
+            @include grid;
+            grid-template-columns: repeat(2,1FR);
+            align-items: center;
+            .cuerpoColumnasContenidoTexto{
+                p{
+                    font-size: 20px;
+                    text-align: center;
+                }
+            }
+            .cuerpoColumnasContenidoImagen {
+                img{
+                    object-fit: contain;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .cuerpoColumnasContenidoClientes{
+                .logo{
+                    img{
+                        object-fit: contain;
+                        width: 70%;
+                        height: 70%;
+                    }
+                }
+            }
+        }
+        
+    }
+}    
+
+}
+
+/* Media Query PC */
+@include PC{
+    main{
+        .indexContent{
+            .cuerpo{
+                .cuerpoColumnas{
+                    .cuerpoColumnasContenido{
+                        .cuerpoColumnasContenidoTexto{
+                            .principal{
+                                font-weight: bold;
+                            }
+                            p{
+                                text-align: justify;
+                                margin-right: 5px;
+                                padding: 5px;
+                            }
+                            .text_PC{
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }                        
 }

@@ -4,12 +4,16 @@
 @import "../utilidades/extend";
 
 main {
+    
     .contactoContent{
+        background-color: $color-fondo;   
         .contactoContentBanner{
             @include banner("../img/Contacto-Banner.jpeg");
         }
         h1{
             text-align: center;
+            margin: 10px;
+            padding: 10px;
         }
        .contactoContentFormulario{
         
@@ -18,7 +22,7 @@ main {
             border-radius: 10px;  
             padding-top: 30px;
             padding-bottom: 20px;  
-            background-color: #fbfbfb; 
+            background-color: $color-fondo; 
             padding-left: 30px; 
             h3{
                 font-size: 16px; 
@@ -87,13 +91,13 @@ main {
             }  
 
         }
-        .contactoContentUbicacion{
+        .contactoContentDatosUbicacion{
             display: flex;
-            width: 100%;
+            height: 60vh;
             margin: 10px;
             padding: 10px;
         }
-        .contactoContentInfo{
+        .contactoContentDatosInfo{
             @include flex;
             width: 1fr;
             height: auto;
@@ -110,18 +114,54 @@ main {
                 text-align: center;
 
             }
-            .contactoContentInfoUbicacion{
+            .contactoContentDatosInfoUbicacion{
                 @include flex_vertical;
             }
-            .contactoContentInfoTelefono{
+            .contactoContentDatosInfoTelefono{
                 @include flex_vertical;
             }
-            .contactoContentInfoCorreo{
+            .contactoContentDatosInfoCorreo{
                 @include flex_vertical;
             }
         } 
     }
 }
+
+@include tablet{
+main {
+        .contactoContentFormulario{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .contactoContentDatos{
+                @include grid;
+                grid-template-columns: 70% 30%;
+                .contactoContentDatosInfo{
+                @include flex_vertical;    
+                }
+            .contactoContentDatosUbicacion{
+                width: 100%;
+                height: 80vh;
+            }
+        }
+    }
+               
+}
+
+@include PC{
+    .contactoContentFormularioGrupo{
+        .separacion{
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        
+        gap: 2rem;
+        align-items: top;
+        }
+    }
+    
+}
+
 
 .contactoContentBanner::before{
     @include banner_trasparencia;
