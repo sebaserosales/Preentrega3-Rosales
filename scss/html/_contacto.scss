@@ -32,7 +32,7 @@ main {
             }
             input{
                 background-color: #fbfbfb; 
-                width: 408px; 
+                width: 80vw; 
                 height: 40px; 
                 border-radius: 5px;  
                 border-style: solid; 
@@ -44,7 +44,7 @@ main {
             }
             textarea{
                 background-color: #fbfbfb; 
-                width: 405px; 
+                width: 80vw; 
                 height: 150px; 
                 border-radius: 5px;  
                 border-style: solid; 
@@ -70,7 +70,7 @@ main {
                 border-color: $color-principal; 
                 border-style: solid; 
                 border-radius: 10px;  
-                width: 420px;   
+                width: 90vw;   
                 cursor: pointer;
                 
               }    
@@ -152,11 +152,31 @@ main {
 @include PC{
     .contactoContentFormularioGrupo{
         .separacion{
-        display: grid;
-        grid-template-columns: repeat(2,50%);
-        
-        gap: 2rem;
-        align-items: top;
+            display: grid;
+            grid-template-columns: repeat(2,50%);
+            
+            gap: 2rem;
+            align-items: top;
+            .contactoContentFormularioGrupoSup{
+                input{
+                    width: 400px;
+                }
+                textarea{
+                    width: 400px;
+                }    
+            }
+            .contactoContentFormularioGrupoInf{
+                input{
+                    width: 400px;
+                }
+                textarea{
+                    width: 400px;
+                }
+                button{
+                    width: 400px;
+                }    
+            }
+    
         }
     }
     
