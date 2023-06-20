@@ -29,7 +29,7 @@ main {
                 display: none;
             }
             .serviciosContentSolucionesTarjeta{
-                flex-basis: 100%;
+                
                 background-color: whitesmoke;
                 color: rgb(67, 65, 65);
                 border-radius: .5rem;
@@ -49,15 +49,21 @@ main {
     main{
         .serviciosContent{
             .serviciosContentSoluciones{
-            display: grid;
-            grid-template-columns: repeat(2,50%);
-            justify-content: center;
-            align-items: baseline;
-            margin: 15px;
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: auto;
+            align-items: stretch;
+            margin: 10px;
+            .serviciosContentSolucionesTarjeta{
+                @include flex_vertical;
+                width: 40vw;
+                
+                gap: 0.5 rem;
+
+            }
                 .tarjeta_cinco{
-                grid-column: span 2;
-                margin-left: 100px;
-                margin-right: 100px;
+                flex-grow: 2; 
                 }
             }
 

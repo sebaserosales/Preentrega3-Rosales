@@ -215,7 +215,6 @@ main .serviciosContent .serviciosContentSoluciones {
   main .serviciosContent .serviciosContentSoluciones .text_PC {
     display: none; }
   main .serviciosContent .serviciosContentSoluciones .serviciosContentSolucionesTarjeta {
-    flex-basis: 100%;
     background-color: whitesmoke;
     color: #434141;
     border-radius: .5rem;
@@ -227,15 +226,21 @@ main .serviciosContent .serviciosContentSoluciones {
 
 @media screen and (min-width: 600px) {
   main .serviciosContent .serviciosContentSoluciones {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    justify-content: center;
-    align-items: baseline;
-    margin: 15px; }
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+    align-items: stretch;
+    margin: 10px; }
+    main .serviciosContent .serviciosContentSoluciones .serviciosContentSolucionesTarjeta {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 40vw;
+      gap: 0.5 rem; }
     main .serviciosContent .serviciosContentSoluciones .tarjeta_cinco {
-      grid-column: span 2;
-      margin-left: 100px;
-      margin-right: 100px; }
+      flex-grow: 2; }
   .carousel .carousel-item {
     height: 500px; }
   .carousel-item img {
@@ -605,7 +610,7 @@ main .contactoContent {
       width: 100px;
       height: 100px; }
     main .contactoContent .contactoContentDatosInfo p {
-      font-size: 15px;
+      font-size: 0.75em;
       text-align: center; }
     main .contactoContent .contactoContentDatosInfo .contactoContentDatosInfoUbicacion {
       display: flex;

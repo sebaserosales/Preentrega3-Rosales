@@ -110,10 +110,11 @@ main {
                 height: 100px;
             }
             p{
-                font-size: 15px;
+                font-size: 0.75em;
                 text-align: center;
 
             }
+            
             .contactoContentDatosInfoUbicacion{
                 @include flex_vertical;
             }
