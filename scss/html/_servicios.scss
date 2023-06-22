@@ -49,21 +49,21 @@ main {
     main{
         .serviciosContent{
             .serviciosContentSoluciones{
-            display:flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            width: auto;
-            align-items: stretch;
-            margin: 10px;
-            .serviciosContentSolucionesTarjeta{
-                @include flex_vertical;
-                width: 40vw;
-                
-                gap: 0.5 rem;
+                display:flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: auto;
+                align-items: stretch;
+                margin: 10px;
+                .serviciosContentSolucionesTarjeta{
+                    @include flex_vertical;
+                    width: 40vw;
 
-            }
+                    gap: 0.5 rem;
+
+                }
                 .tarjeta_cinco{
-                flex-grow: 2; 
+                    flex-grow: 1; 
                 }
             }
 
@@ -71,7 +71,7 @@ main {
     }
     .carousel .carousel-item {
         height: 500px;
-      }
+    }
       
       .carousel-item  img {
           position: absolute;
@@ -79,16 +79,37 @@ main {
           top: 0;
           left: 0;
           min-height: 500px;
-          }
+        }
 }
 
 @include PC{
-    
-    .carousel .carousel-item {
-        height: 650px;
-      }
-      
-      .carousel-item  img {
-          min-height: 500px;
-          }    
-}
+    main{    
+        .serviciosContent{
+            .serviciosContentCarrusel{
+                .carousel {
+                    .carousel-inner{
+                        .carousel-item{
+                            img{
+
+                                object-fit: cover;
+                                width: 100%;
+                                height: 100%;
+                                top: 0;
+                                left: 0;
+
+                            }
+                        }
+                    }
+                }
+            }
+            .serviciosContentSoluciones{
+
+                .tarjeta_cinco{
+                    @include flex_vertical;
+                    flex-grow: 0;
+                    width: 70vw;         
+                }
+            }  
+        }
+    }
+}          

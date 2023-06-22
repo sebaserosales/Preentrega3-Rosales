@@ -38,6 +38,7 @@ position: relative;
 @include flex;
 background-image: url($url);
 background-size: cover;
+background-repeat: no-repeat;
 }
 
 @mixin banner_titulo{

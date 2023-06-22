@@ -15,28 +15,30 @@ header {
     background-color: black;
     z-index: 1; }
 
-footer .contacto {
-  padding: 10px;
+footer {
   background-color: black;
-  color: whitesmoke; }
-  footer .contacto .contactoData p {
-    text-align: justify; }
-  footer .contacto .contactoData h3 {
-    font-size: 2rem;
-    font-weight: bold; }
-
-footer h3 {
-  text-align: center;
-  padding: 10px; }
-
-footer section {
-  padding: 10px; }
-
-footer h4 {
-  text-align: center;
-  background-color: black;
-  color: whitesmoke;
-  font-size: x-small; }
+  bottom: 0;
+  height: 60px; }
+  footer .contacto {
+    padding: 10px;
+    background-color: black;
+    color: whitesmoke; }
+    footer .contacto .contactoData p {
+      text-align: justify; }
+    footer .contacto .contactoData h3 {
+      font-size: 2rem;
+      font-weight: bold; }
+  footer h3 {
+    text-align: center;
+    padding: 10px; }
+  footer section {
+    padding: 10px; }
+  footer h4 {
+    text-align: center;
+    background-color: black;
+    color: whitesmoke;
+    font-size: x-small;
+    position: bottom; }
 
 @media screen and (min-width: 600px) {
   footer .contacto p {
@@ -46,7 +48,7 @@ footer h4 {
     justify-content: space-evenly;
     margin: 10px; } }
 
-main .indexContent .banner img, main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen img, main .clientesContent .clientesContentAreas .clientesContentAreasTarjeta img, main .empresaContent .empresaContentResena img, main .empresaContent .empresaContentCertificados .empresaContentCertificadosImagenes .empresaContentCertificadosImagenesInfo img, main .contactoContent .contactoContentDatosInfo img {
+main .indexContent .banner img, main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen img, main .clientesContent .clientesContentAreas .clientesContentAreasTarjeta img, main .empresaContent .empresaContentResena img, main .contactoContent .contactoContentDatosInfo img {
   object-fit: cover;
   width: 100%;
   height: 100%; }
@@ -115,7 +117,7 @@ main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColum
 
 /*Media Query Tablet*/
 @media screen and (min-width: 600px) {
-  main .cuerpoColumnas .cuerpoColumnasContenido {
+  main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido {
     display: grid;
     align-items: center;
     justify-content: center;
@@ -126,29 +128,32 @@ main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColum
     width: 100vw;
     margin: 10px;
     padding: 10px; }
-    main .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoTexto {
+    main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoTexto {
       margin: 10px; }
-      main .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoTexto p {
+      main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoTexto p {
         font-size: 20px;
         text-align: center; }
-    main .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen {
+    main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen {
       margin: 10px; }
-      main .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen img {
+      main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen img {
         object-fit: contain;
         width: 100%;
         height: 100%; }
-    main .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoClientes {
-      display: flex;
-      flex-wrap: wrap; }
-      main .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoClientes ul {
+    main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoClientes {
+      display: flex; }
+      main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoClientes ul {
+        display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 1rem; }
-        main .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoClientes ul li {
-          width: 100px;
-          height: 100px; }
-          main .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoClientes ul li img {
-            object-fit: cover;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 10px;
+        margin: 10px; }
+        main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoClientes ul li {
+          width: 15vw;
+          height: 15vh; }
+          main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoClientes ul li img {
+            object-fit: contain;
             width: 100%;
             height: 100%; } }
 
@@ -163,7 +168,7 @@ main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColum
   main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoTexto .text_PC {
     display: block; } }
 
-main .indexContent .banner img, main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen img, main .clientesContent .clientesContentAreas .clientesContentAreasTarjeta img, main .empresaContent .empresaContentResena img, main .empresaContent .empresaContentCertificados .empresaContentCertificadosImagenes .empresaContentCertificadosImagenesInfo img, main .contactoContent .contactoContentDatosInfo img {
+main .indexContent .banner img, main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen img, main .clientesContent .clientesContentAreas .clientesContentAreasTarjeta img, main .empresaContent .empresaContentResena img, main .contactoContent .contactoContentDatosInfo img {
   object-fit: cover;
   width: 100%;
   height: 100%; }
@@ -240,7 +245,7 @@ main .serviciosContent .serviciosContentSoluciones {
       width: 40vw;
       gap: 0.5 rem; }
     main .serviciosContent .serviciosContentSoluciones .tarjeta_cinco {
-      flex-grow: 2; }
+      flex-grow: 1; }
   .carousel .carousel-item {
     height: 500px; }
   .carousel-item img {
@@ -251,12 +256,21 @@ main .serviciosContent .serviciosContentSoluciones {
     min-height: 500px; } }
 
 @media screen and (min-width: 1024px) {
-  .carousel .carousel-item {
-    height: 650px; }
-  .carousel-item img {
-    min-height: 500px; } }
+  main .serviciosContent .serviciosContentCarrusel .carousel .carousel-inner .carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; }
+  main .serviciosContent .serviciosContentSoluciones .tarjeta_cinco {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+    width: 70vw; } }
 
-main .indexContent .banner img, main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen img, main .clientesContent .clientesContentAreas .clientesContentAreasTarjeta img, main .empresaContent .empresaContentResena img, main .empresaContent .empresaContentCertificados .empresaContentCertificadosImagenes .empresaContentCertificadosImagenesInfo img, main .contactoContent .contactoContentDatosInfo img {
+main .indexContent .banner img, main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen img, main .clientesContent .clientesContentAreas .clientesContentAreasTarjeta img, main .empresaContent .empresaContentResena img, main .contactoContent .contactoContentDatosInfo img {
   object-fit: cover;
   width: 100%;
   height: 100%; }
@@ -297,7 +311,8 @@ main .clientesContent .clientesContentBanner {
   justify-content: center;
   gap: 1rem;
   background-image: url("../img/clientes-banner.jpeg");
-  background-size: cover; }
+  background-size: cover;
+  background-repeat: no-repeat; }
   main .clientesContent .clientesContentBanner h1 {
     position: relative;
     text-align: center;
@@ -326,7 +341,8 @@ main .clientesContent .clientesContentAreas {
       margin-left: 30px; }
     main .clientesContent .clientesContentAreas .clientesContentAreasTarjeta ul {
       text-align: center;
-      list-style: none; }
+      list-style: none;
+      line-height: 1.8; }
       main .clientesContent .clientesContentAreas .clientesContentAreasTarjeta ul li {
         padding: 3px; }
 
@@ -359,7 +375,7 @@ main .clientesContent .clientesContentAreas {
   left: 0px;
   background-color: rgba(232, 226, 226, 0.5); }
 
-main .indexContent .banner img, main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen img, main .clientesContent .clientesContentAreas .clientesContentAreasTarjeta img, main .empresaContent .empresaContentResena img, main .empresaContent .empresaContentCertificados .empresaContentCertificadosImagenes .empresaContentCertificadosImagenesInfo img, main .contactoContent .contactoContentDatosInfo img {
+main .indexContent .banner img, main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen img, main .clientesContent .clientesContentAreas .clientesContentAreasTarjeta img, main .empresaContent .empresaContentResena img, main .contactoContent .contactoContentDatosInfo img {
   object-fit: cover;
   width: 100%;
   height: 100%; }
@@ -400,7 +416,8 @@ main .empresaContent .empresaContentBanner {
   justify-content: center;
   gap: 1rem;
   background-image: url("../img/team-banner.jpeg");
-  background-size: cover; }
+  background-size: cover;
+  background-repeat: no-repeat; }
   main .empresaContent .empresaContentBanner h1 {
     position: relative;
     text-align: center;
@@ -433,13 +450,17 @@ main .empresaContent .empresaContentCertificados .empresaContentCertificadosImag
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
-  width: 90vw;
+  width: 100vw;
   margin: 10px;
   padding: 10px; }
   main .empresaContent .empresaContentCertificados .empresaContentCertificadosImagenes .empresaContentCertificadosImagenesInfo h3 {
     text-align: center;
     margin: 10px;
     font-size: 1rem; }
+  main .empresaContent .empresaContentCertificados .empresaContentCertificadosImagenes .empresaContentCertificadosImagenesInfo img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down; }
 
 .empresaContentBanner::before {
   content: "";
@@ -459,18 +480,24 @@ main .empresaContent .empresaContentCertificados .empresaContentCertificadosImag
     row-gap: 1rem;
     grid-template-columns: 30% 70%; }
   main .empresaContent .empresaContentCertificados .empresaContentCertificadosImagenes {
-    display: grid;
-    grid-template-columns: repeat(2, 45%);
-    column-gap: 1rem;
-    align-items: center;
-    justify-content: space-between; }
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: stretch;
+    justify-content: space-evenly;
+    width: 100vw; }
     main .empresaContent .empresaContentCertificados .empresaContentCertificadosImagenes .empresaContentCertificadosImagenesInfo {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       margin: 10px;
-      padding: 10px; } }
+      padding: 10px;
+      width: 40vw; }
+      main .empresaContent .empresaContentCertificados .empresaContentCertificadosImagenes .empresaContentCertificadosImagenesInfo img {
+        width: 100%;
+        height: 100%;
+        object-fit: scale-down; } }
 
 @media screen and (min-width: 1024px) {
   main .empresaContent .empresaContentResena {
@@ -479,9 +506,15 @@ main .empresaContent .empresaContentCertificados .empresaContentCertificadosImag
       text-align: justify;
       font-size: 1rem; }
     main .empresaContent .empresaContentResena .text_PC {
-      display: block; } }
+      display: block; }
+  main .empresaContent .empresaContentCertificados .empresaContentCertificadosImagenes {
+    display: flex;
+    width: 100vw; }
+    main .empresaContent .empresaContentCertificados .empresaContentCertificadosImagenes .empresaContentCertificadosImagenesInfo {
+      display: flex;
+      width: 20vw; } }
 
-main .indexContent .banner img, main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen img, main .clientesContent .clientesContentAreas .clientesContentAreasTarjeta img, main .empresaContent .empresaContentResena img, main .empresaContent .empresaContentCertificados .empresaContentCertificadosImagenes .empresaContentCertificadosImagenesInfo img, main .contactoContent .contactoContentDatosInfo img {
+main .indexContent .banner img, main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen img, main .clientesContent .clientesContentAreas .clientesContentAreasTarjeta img, main .empresaContent .empresaContentResena img, main .contactoContent .contactoContentDatosInfo img {
   object-fit: cover;
   width: 100%;
   height: 100%; }
@@ -524,7 +557,8 @@ main .contactoContent {
     justify-content: center;
     gap: 1rem;
     background-image: url("../img/Contacto-Banner.jpeg");
-    background-size: cover; }
+    background-size: cover;
+    background-repeat: no-repeat; }
   main .contactoContent h1 {
     text-align: center;
     margin: 10px;

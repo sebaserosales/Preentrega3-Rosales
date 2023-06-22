@@ -25,6 +25,10 @@ header{
 }
 
 footer{
+    background-color: $color-headers;
+    
+    bottom: 0;
+    height: 60px;
     .contacto{
         padding: 10px;
         background-color: $color-headers;
@@ -51,6 +55,7 @@ footer{
         background-color: $color-headers;
         color: whitesmoke;
         font-size: x-small;
+        position: bottom;
     }
     
 }

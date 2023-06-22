@@ -51,7 +51,7 @@ main{
                 
                 @include flex;
                     flex-wrap: wrap;
-                    width: 90vw;
+                    width: 100vw;
                     margin: 10px;
                     padding: 10px;
                     .empresaContentCertificadosImagenesInfo{
@@ -61,7 +61,9 @@ main{
                         font-size: 1rem;
                     }
                     img{
-                        @extend %imagenes;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: scale-down;
                     }
                 }    
             }        
@@ -87,18 +89,26 @@ main{
         .empresaContentCertificados
         {
             .empresaContentCertificadosImagenes{
-                display: grid;
-                grid-template-columns: repeat(2,45%);
-                column-gap: 1rem;
-                align-items: center;
-                justify-content: space-between;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                align-items: stretch;
+                justify-content: space-evenly;
+                width: 100vw;
                 
                 
-            .empresaContentCertificadosImagenesInfo{
-                @include flex_vertical;
-                margin: 10px;
-                padding: 10px;
-            }
+                
+                .empresaContentCertificadosImagenesInfo{
+                    @include flex_vertical;
+                    margin: 10px;
+                    padding: 10px;
+                    width: 40vw;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: scale-down;
+                    }
+                }
             }
         }
     }
@@ -118,6 +128,16 @@ main{
                     display: block;
                 }
             }
+            .empresaContentCertificados{    
+                .empresaContentCertificadosImagenes{
+                    display: flex;
+                    width: 100vw;
+                    .empresaContentCertificadosImagenesInfo{
+                        display: flex;
+                        width: 20vw;
+                    }
+                }
+            }    
         }
     }           
 }
