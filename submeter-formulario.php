@@ -2,12 +2,12 @@
 
 //Conecto mi form con el server
 
-$nombre = $_POST["introducir_nombre"];
-$mail = $_POST["introducir_email"];
-$telefono = $_POST["introducir_telefono"];
-$website = $_POST["introducir_website"];
-$asunto = $_POST["introducir_asunto"];
-$mensaje = $_POST["introducir_mensaje"];
+$nombre = $_POST['introducir_nombre'];
+$mail = $_POST['introducir_email'];
+$telefono = $_POST['introducir_telefono'];
+$website = $_POST['introducir_website'];
+$asunto = $_POST['introducir_asunto'];
+$mensaje = $_POST['introducir_mensaje'];
 
 //Cuerpo del mensaje
 
@@ -24,6 +24,6 @@ $destinatario = "sebastian.e.rosales@gmail.com";
 
 mail($destinatario, $asunto, utf8_decode($mensaje), $header);
 
-header("Location:index.html");
+header('Location:index.html');
 
-
+?>

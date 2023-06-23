@@ -55,11 +55,12 @@ main {
                 width: auto;
                 align-items: stretch;
                 margin: 10px;
+                gap:2rem;
                 .serviciosContentSolucionesTarjeta{
                     @include flex_vertical;
                     width: 40vw;
 
-                    gap: 0.5 rem;
+                    gap: 0.5rem;
 
                 }
                 .tarjeta_cinco{
@@ -103,7 +104,10 @@ main {
                 }
             }
             .serviciosContentSoluciones{
-
+                .serviciosContentSolucionesTarjeta:hover{
+                    transform: scale(1.1);
+                    transition: 0.7s;
+                }
                 .tarjeta_cinco{
                     @include flex_vertical;
                     flex-grow: 0;
