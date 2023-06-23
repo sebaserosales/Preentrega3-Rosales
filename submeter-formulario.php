@@ -19,11 +19,18 @@ $mensaje .= "El asunto es: " . $asunto . " \r\n";
 $mensaje .= "Mensaje: " . $_POST["introducir_mensaje"] . " \r\n";
 
 $destinatario = "sebastian.e.rosales@gmail.com";
+$asunto = "Contacto desde la web';
+
+$headers  = 'MIME-Version: 1.0' . "\r\n"
+    .'Content-type: text/html; charset=utf-8' . "\r\n"
+    .'From: ' . $mail . "\r\n";
 
 //Funcion de enviar
 
-mail($destinatario, $asunto, utf8_decode($mensaje), $header);
-
-header('Location:index.html');
+if(mail($destinatario, $asunto, utf8_decode($mensaje), $headers)) {
+    echo "<p>Gracias por contactarnos, $nombre. Recibiras una respuesta a la brevedad.</p>";
+} else {
+    echo '<p>Lo lamentamos pero no se pudo enviar su consulta.</p>';
+}
 
 ?>
