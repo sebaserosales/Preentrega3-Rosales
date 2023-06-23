@@ -33,23 +33,30 @@ footer{
         padding: 10px;
         background-color: $color-headers;
         color: whitesmoke;
-        .contactoData{
-            p{
-                text-align: justify;
-            }
-            h3{
-                font-size: 2rem;
-                font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .contactoLogo{
+        align-items: center;
+        width: 100px;
+            img{
+                object-fit: contain;
+                width: 100%;
+                height: 100%;
+            }    
+        }
+        .redes{
+            display: flex;
+            width: 100px;
+            gap: 0.5rem;
+            img{
+                object-fit: contain;
+                width: 100%;
+                height: 100%;
+                
             }
         }
-    }
-    h3{
-        text-align: center;
-        padding: 10px;
-    }
-    section{
-        padding: 10px;
-    }
+    }    
     h4{
         text-align: center;
         background-color: $color-headers;
@@ -62,13 +69,8 @@ footer{
 
 @include tablet{
     footer{
-        .contacto p{
-            text-align: center;
-        }
-        .redes{
-            display: flex;
-            justify-content: space-evenly;
-            margin: 10px;
+        .contacto{
+          justify-content: space-around;  
         }
     }
 }

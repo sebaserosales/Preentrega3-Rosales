@@ -22,17 +22,25 @@ footer {
   footer .contacto {
     padding: 10px;
     background-color: black;
-    color: whitesmoke; }
-    footer .contacto .contactoData p {
-      text-align: justify; }
-    footer .contacto .contactoData h3 {
-      font-size: 2rem;
-      font-weight: bold; }
-  footer h3 {
-    text-align: center;
-    padding: 10px; }
-  footer section {
-    padding: 10px; }
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    footer .contacto .contactoLogo {
+      align-items: center;
+      width: 100px; }
+      footer .contacto .contactoLogo img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%; }
+    footer .contacto .redes {
+      display: flex;
+      width: 100px;
+      gap: 0.5rem; }
+      footer .contacto .redes img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%; }
   footer h4 {
     text-align: center;
     background-color: black;
@@ -41,12 +49,8 @@ footer {
     position: bottom; }
 
 @media screen and (min-width: 600px) {
-  footer .contacto p {
-    text-align: center; }
-  footer .redes {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 10px; } }
+  footer .contacto {
+    justify-content: space-around; } }
 
 main .indexContent .banner img, main .indexContent .cuerpo .cuerpoColumnas .cuerpoColumnasContenido .cuerpoColumnasContenidoImagen img, main .clientesContent .clientesContentAreas .clientesContentAreasTarjeta img, main .empresaContent .empresaContentResena img, main .contactoContent .contactoContentDatosInfo img {
   object-fit: cover;
