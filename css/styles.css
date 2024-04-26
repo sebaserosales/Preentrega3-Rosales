@@ -703,6 +703,7 @@ main .contactoContent {
     gap: 1rem;
     width: 1fr;
     height: auto;
+    justify-content: space-around;
     margin: 10px;
     padding: 10px; }
     main .contactoContent .contactoContentDatosInfo img {
