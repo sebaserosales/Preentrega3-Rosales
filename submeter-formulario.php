@@ -18,7 +18,7 @@ $mensaje .= "El sitio web es " . $website . " \r\n";
 $mensaje .= "El asunto es: " . $asunto . " \r\n";
 $mensaje .= "Mensaje: " . $_POST["introducir_mensaje"] . " \r\n";
 
-$destinatario = "sebastian.e.rosales@gmail.com";
+$destinatario = "pvita@ralf-automatizacion.com.ar";
 $asunto = "Contacto desde la web';
 
 $headers  = 'MIME-Version: 1.0' . "\r\n"
